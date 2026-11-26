@@ -1,6 +1,6 @@
 {
   "name": "@kasegao/dads-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Unofficial React implementation of the Digital Agency Design System (DADS), styled with Panda CSS",
   "keywords": [
     "dads",
