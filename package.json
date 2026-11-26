@@ -1,15 +1,29 @@
 {
-  "name": "dads-ui",
+  "name": "@kasegao/dads-ui",
   "version": "0.1.0",
-  "private": true,
+  "description": "Unofficial React implementation of the Digital Agency Design System (DADS), styled with Panda CSS",
+  "keywords": [
+    "dads",
+    "design-system",
+    "react",
+    "panda-css"
+  ],
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasegao/dads-ui.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": [
     "**/*.css"
   ],
   "files": [
     "dist",
-    "styled-system"
+    "styled-system",
+    "LICENSES"
   ],
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",

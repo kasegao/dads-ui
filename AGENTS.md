@@ -36,12 +36,19 @@ No Tailwind. Styles are written with Panda CSS; complex widgets use Ark UI.
 
 `pnpm build` produces two ways to consume the library:
 
-- Without Panda: `dads-ui/styles.css` (every component's styles) plus the components.
+- Without Panda: `@kasegao/dads-ui/styles.css` (every component's styles) plus the components.
 - With Panda: `panda lib` writes `dist/panda/` (manifest, preset, build info) and regenerates the
   `./css`, `./patterns`, `./jsx`, `./tokens`, `./helpers`, `./types`, and `./panda/*` entries of
-  `package.json` `exports`. Apps set `designSystem: 'dads-ui'`. Do not edit those entries by
-  hand; only `.`, `./preset`, and `./styles.css` are hand-written. `styled-system/` is published
-  because the generated entries point at it.
+  `package.json` `exports`. Apps set `designSystem: '@kasegao/dads-ui'`. Do not edit those
+  entries by hand; only `.`, `./preset`, and `./styles.css` are hand-written. `styled-system/` is
+  published because the generated entries point at it.
+
+### Release
+
+The package is published to npm as `@kasegao/dads-ui`. Bump `version` in `package.json`, merge to
+`main`, then push a tag `vX.Y.Z` that matches it. `.github/workflows/publish.yml` runs lint,
+typecheck, tests and the build, then publishes with npm trusted publishing (OIDC); no npm token is
+stored in the repository.
 
 ## File layout
 
