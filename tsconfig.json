@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["vite/client", "@vitest/browser-playwright"]
+  },
+  "include": [
+    "src",
+    ".storybook",
+    "styled-system",
+    "panda.config.ts",
+    "panda.build.config.ts",
+    "vite.config.ts",
+    "vitest.setup.ts"
+  ]
+}

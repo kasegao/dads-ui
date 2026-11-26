@@ -1,0 +1,10 @@
+node_modules
+dist
+styled-system
+storybook-static
+.panda
+*.log
+.DS_Store
+.vitest-attachments
+__screenshots__
+.vitest
