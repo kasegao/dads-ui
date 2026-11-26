@@ -43,6 +43,12 @@ No Tailwind. Styles are written with Panda CSS; complex widgets use Ark UI.
   entries by hand; only `.`, `./preset`, and `./styles.css` are hand-written. `styled-system/` is
   published because the generated entries point at it.
 
+### CI
+
+`.github/workflows/ci.yml` runs lint, typecheck and tests on pull requests that are not drafts.
+After adding a workflow or changing a `uses:`, run `gh actions-lock` and commit
+`.github/workflows/actions.lock`.
+
 ### Release
 
 The package is published to npm as `@kasegao/dads-ui`. Bump `version` in `package.json`, merge to
@@ -165,8 +171,8 @@ Tests run in a real browser. Use `render` from `vitest-browser-react` and locato
   handling, callbacks.
 - Styles are real, so assert computed styles only for design-critical values (key color, size).
 - Do not assert on generated class names.
-- Tests share one real pointer. `vitest.setup.ts` parks it in the bottom-right corner before each
-  test so elements do not start in their `:hover` state.
+- Tests share one real pointer. `vitest.setup.ts` parks it on a fixed marker in the bottom-left
+  corner before each test so elements do not start in their `:hover` state.
 
 ## Before declaring work complete
 
