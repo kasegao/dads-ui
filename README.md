@@ -1,16 +1,24 @@
-# dads-ui
+# @kasegao/dads-ui
 
 [デジタル庁デザインシステム](https://design.digital.go.jp/dads/)（DADS）の非公式なReact実装です。スタイルにPanda CSS、一部のコンポーネントにArk UIを使っています。
 
 デジタル庁が作成・公開しているものではありません。
+
+## インストール
+
+```sh
+pnpm add @kasegao/dads-ui
+```
+
+React 19以上が必要です。
 
 ## 使い方
 
 Panda CSSを使わないアプリでは、スタイルシートを読み込んでからコンポーネントを使います。
 
 ```tsx
-import 'dads-ui/styles.css';
-import { Button } from 'dads-ui';
+import '@kasegao/dads-ui/styles.css';
+import { Button } from '@kasegao/dads-ui';
 
 <Button variant='solid-fill' size='lg'>
   送信
@@ -21,7 +29,7 @@ Panda CSSを使うアプリでは、スタイルシートを読み込む代わ�
 
 ```ts
 export default defineConfig({
-  designSystem: 'dads-ui',
+  designSystem: '@kasegao/dads-ui',
   include: ['./src/**/*.{ts,tsx}'],
 });
 ```
