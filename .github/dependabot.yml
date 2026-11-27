@@ -1,0 +1,33 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Bump pinned versions, but leave the peerDependencies ranges alone while they still match.
+    versioning-strategy: increase-if-necessary
+    groups:
+      # Packages released together must be updated together.
+      storybook:
+        patterns:
+          - storybook
+          - "@storybook/*"
+      panda:
+        patterns:
+          - "@pandacss/*"
+      vitest:
+        patterns:
+          - vitest
+          - "@vitest/*"
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

@@ -49,6 +49,10 @@ No Tailwind. Styles are written with Panda CSS; complex widgets use Ark UI.
 After adding a workflow or changing a `uses:`, run `gh actions-lock` and commit
 `.github/workflows/actions.lock`.
 
+`.github/dependabot.yml` opens weekly update pull requests for npm packages and GitHub Actions.
+Packages that are released together (Storybook, Panda CSS, Vitest, React) are grouped into one
+pull request each. Dependabot updates `actions.lock` itself when it bumps an action.
+
 ### Release
 
 The package is published to npm as `@kasegao/dads-ui`. Bump `version` in `package.json`, merge to
